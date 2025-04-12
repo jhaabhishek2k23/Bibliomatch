@@ -8,6 +8,6 @@ public class WelcomeController {
     
     @GetMapping("/")
     public String getMethodName() {
-        return "index"; // Refers to templates/index.html
+        return "index"; 
     }
 }
