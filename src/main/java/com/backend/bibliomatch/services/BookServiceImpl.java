@@ -1,5 +1,7 @@
 package com.backend.bibliomatch.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +18,21 @@ public class BookServiceImpl implements BookService{
     public Book addBook(Book currBookDetails) {
 
         return bookRepository.save(currBookDetails);
+    }
+
+    @Override
+    public void removeBook(Long id) {
+        bookRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Book> getAllOwnedBooks() {
+        return bookRepository.findAll();
+    }
+
+    @Override
+    public void updateOwnedBook(Long id, Book book) {
+       bookRepository.updateOwnedBook(id,book);
     }
     
 }
