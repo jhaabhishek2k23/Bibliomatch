@@ -8,6 +8,10 @@ import org.springframework.stereotype.Service;
 
 import com.backend.bibliomatch.entities.User;
 import com.backend.bibliomatch.repositories.UserRepository;
+import com.lowagie.text.Document;
+import com.lowagie.text.DocumentException;
+import com.lowagie.text.Paragraph;
+import com.lowagie.text.pdf.PdfWriter;
 
 
 
