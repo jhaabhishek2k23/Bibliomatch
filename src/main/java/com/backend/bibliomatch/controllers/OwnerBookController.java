@@ -67,7 +67,7 @@ public class OwnerBookController {
     public ResponseEntity<?> putMethodName(@PathVariable Long id, @RequestBody Book book) {
         try{
             bookService.updateOwnedBook(id, book);
-            return ResponseEntity.ok("Book with id "+ id + "has been updated..");
+            return ResponseEntity.ok("Book with id "+ id + "has been updated...");
         }catch(Exception e) {
             return ResponseEntity.status(403).body(e.getMessage());
         }
